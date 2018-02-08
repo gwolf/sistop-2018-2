@@ -34,7 +34,7 @@ Un par de tutoriales para aprender a usar Git y GitHub:
 * [Got 15 minutes and want to learn Git?](https://try.github.io/levels/1/challenges/1)
   Tutorial interactivo y fácil de seguir para comprender el flujo
   básico de Git.
-* [A visual Git reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+* [A visual Git reference](https://marklodato.github.io/visual-git-guide/index-es.html)
   Explica en términos de grafos qué son las principales operaciones en
   los repositorios. Muy recomendado para tener una mejor comprensión
   de lo que hace Git "tras bambalinas".
