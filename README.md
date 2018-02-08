@@ -70,11 +70,11 @@ espacios similares hasta meras suposiciones.
    subdirectorio dentro del área correspondiente.
 3. Todos los alumnos harán un *fork* del árbol y desarrollarán la
    tarea en su *fork*.
-    1. Si la tarea es en equipos, basta con que *uno de ustedes* lo
-       haga — ¡Pero no olviden documentar claramente quiénes son los
-       integrantes del equipo!
-    2. Pueden también crear un *fork* y trabajar colaborativamente en éste
-       entre varios.
+    * Si la tarea es en equipos, basta con que *uno de ustedes* lo
+      haga — ¡Pero no olviden documentar claramente quiénes son los
+      integrantes del equipo!
+    * Pueden también crear un *fork* y trabajar colaborativamente en éste
+      entre varios.
 4. Para todas las entregas, usa el esquema de nombre estandarizado que
    presentamos en la
    [sección 4 de la práctica 1](https://github.com/gwolf/sistop-2018-2/tree/master/practicas/1/README.md):
@@ -90,8 +90,8 @@ espacios similares hasta meras suposiciones.
 5. ¡Registren el desarrollo de su proyecto! En todas las entregas no
    triviales, se calificará el que haya un *avance visible*, reflejado
    en varios *commits*.
-    1. Ojo, importa que los mensajes en la bitácora resuman el trabajo
-       realizado a cada paso.
+    * Ojo, importa que los mensajes en la bitácora resuman el trabajo
+      realizado a cada paso.
 6. Cuando estén contantos con el desarrollo, hagan un *pull
    request*. Eso (y únicamente eso) contará como una entrega de
    trabajo.
