@@ -1,0 +1,3 @@
+caterick.txt
+ls
+Soy Erick Paniagua y mi nombre de usuario es ShadowDragon01
