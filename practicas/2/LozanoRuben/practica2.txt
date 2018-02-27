@@ -1,0 +1,34 @@
+15 LINEAS DEL TOTAL DE LLAMADAS AL SISTEMA MOSTRADAS POR STRACE CAT.
+
+
+arch_prctl(ARCH_SET_FS, 0x7f0c634d5700) = 0 --establece el proceso específico de la arquitectura(64 bits)
+mprotect(0x7f0c632bd000, 16384, PROT_READ) = 0 --establece protección en una región de la memoria para que esta pueda ser leida
+mprotect(0x60b000, 4096, PROT_READ)     = 0
+mprotect(0x7f0c634ec000, 4096, PROT_READ) = 0
+munmap(0x7f0c634d7000, 83111)           = 0 --elimina las asignaciones para el rango de direcciones especificado
+brk(NULL)                               = 0x2435000 --cambia el tamaño del segmento de datos y establece el final del segmento de datos en el valor especificado
+brk(0x2456000)                          = 0x2456000 ----cambia el tamaño del segmento de datos y establece el final del segmento de datos en el valor especificado
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3 --inicia  un programa en una nueva terminal virtual
+fstat(3, {st_mode=S_IFREG|0644, st_size=28216832, ...}) = 0 --recupera la información que está especificada por el descriptor de archivo.
+mmap(NULL, 28216832, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f0c61414000 -- crea una nueva asignación en el espacio de direcciones virtuales del proceso de llamada.(mapeo)
+close(3)                                = 0 -- cierra el archivo
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+fadvise64(0, 0, 0, POSIX_FADV_SEQUENTIAL) = 0 --Predeclarar un patrón de acceso para datos de archivo.La aplicación espera acceder a los datos especificados de forma secuencial
+mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f0c634b2000
+read(0, 0x7f0c634b3000, 131072)         = ? ERESTARTSYS (To be restarted if SA_RESTART is set)--empieza a leer desde el descriptor de archivos,empieza la operacion de lectura
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(0, 0x7f0c634b3000, 131072)         = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(0, 0x7f0c634b3000, 131072)         = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(0, 0x7f0c634b3000, 131072)         = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(0, 
+
+SO: elementary os
+	Para obtener la traza se empleo el programa strace 
+	El programa objetivo a trazar fue cat
+		Seleccione este programa para poder apreciar como se pide al sistem mostrar el cotenido de calquier archivoa 
+	Observaciones: me di cuenta que cat esta echo de otros programas que tiene secuencia las salidas de algunos son valores de entradas para otros, tambien me di cuenta que entre los programas hay un manejo de derecciones y memoria interesantes.
+
