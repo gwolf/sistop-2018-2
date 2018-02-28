@@ -1,0 +1,141 @@
+Alejandro Espejel López
+
+
+*Sistema Operativo utilizado? Ubuntu 16.04.3 LTS.
+
+*Programa para obtener la traza? Fue hecho con el comando strace desde la terminal.
+
+*Programa objetivo trazado? El comando mkdir. 
+
+*¿Por que? Me llamó la atención saber como funcionaba dicho comando ya que es muy utilizado.
+
+
+Resultados:
+
+execve("/bin/mkdir", ["mkdir"], [/* 64 vars */]) = 0
+//Ejecuta el programa, a este hay que darle una ubicacion del proceso a ejecutar.
+
+brk(NULL)                               = 0x244c000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff215138000
+//Asocia un rango de direcciones fisicas a la memoria de un dispositivo.
+
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+//Revisa los privilegios reales del usuario para entrar al directorio sigueinte en modo lectura.
+
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=99616, ...}) = 0
+//Devuelve informacion de un archivo , da el tamaño del archivo en bytes.
+
+mmap(NULL, 99616, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff21511f000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260Z\0\0\0\0\0\0"..., 832) = 832
+//Lee los bytes del decriptor del archivo e incrementa el offset en esa cantidad.
+
+fstat(3, {st_mode=S_IFREG|0644, st_size=130224, ...}) = 0
+mmap(NULL, 2234080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff214cf3000
+mprotect(0x7ff214d12000, 2093056, PROT_NONE) = 0
+//Cambia las protecciones de acceso de la memoria mapeada a partir de la direccion dada, seguida de la longitud a proteger.
+
+mmap(0x7ff214f11000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e000) = 0x7ff214f11000
+mmap(0x7ff214f13000, 5856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ff214f13000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff214929000
+mprotect(0x7ff214ae9000, 2097152, PROT_NONE) = 0
+mmap(0x7ff214ce9000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7ff214ce9000
+mmap(0x7ff214cef000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ff214cef000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libpcre.so.3", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\25\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=456632, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff21511e000
+mmap(NULL, 2552072, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff2146b9000
+mprotect(0x7ff214727000, 2097152, PROT_NONE) = 0
+mmap(0x7ff214927000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6e000) = 0x7ff214927000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=14608, ...}) = 0
+mmap(NULL, 2109680, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff2144b5000
+mprotect(0x7ff2144b8000, 2093056, PROT_NONE) = 0
+mmap(0x7ff2146b7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7ff2146b7000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260`\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=138696, ...}) = 0
+mmap(NULL, 2212904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff214298000
+mprotect(0x7ff2142b0000, 2093056, PROT_NONE) = 0
+mmap(0x7ff2144af000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7ff2144af000
+mmap(0x7ff2144b1000, 13352, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ff2144b1000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff21511d000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff21511b000
+arch_prctl(ARCH_SET_FS, 0x7ff21511b800) = 0
+mprotect(0x7ff214ce9000, 16384, PROT_READ) = 0
+mprotect(0x7ff2144af000, 4096, PROT_READ) = 0
+mprotect(0x7ff2146b7000, 4096, PROT_READ) = 0
+mprotect(0x7ff214927000, 4096, PROT_READ) = 0
+mprotect(0x7ff214f11000, 4096, PROT_READ) = 0
+mprotect(0x611000, 4096, PROT_READ)     = 0
+mprotect(0x7ff21513a000, 4096, PROT_READ) = 0
+munmap(0x7ff21511f000, 99616)           = 0
+set_tid_address(0x7ff21511bad0)         = 2641
+set_robust_list(0x7ff21511bae0, 24)     = 0
+rt_sigaction(SIGRTMIN, {0x7ff21429db50, [], SA_RESTORER|SA_SIGINFO, 0x7ff2142a9390}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x7ff21429dbe0, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7ff2142a9390}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+statfs("/sys/fs/selinux", 0x7fff4855b130) = -1 ENOENT (No such file or directory)
+statfs("/selinux", 0x7fff4855b130)      = -1 ENOENT (No such file or directory)
+//Retorna informacion hacerca del sistema de archivos montado
+
+brk(NULL)                               = 0x244c000
+brk(0x246d000)                          = 0x246d000
+open("/proc/filesystems", O_RDONLY)     = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 358
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=10219008, ...}) = 0
+mmap(NULL, 10219008, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff2138d9000
+close(3)                                = 0
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2995, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2995
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+open("/usr/share/locale/es_MX/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/es/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale-langpack/es_MX/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale-langpack/es/LC_MESSAGES/coreutils.mo", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=291361, ...}) = 0
+mmap(NULL, 291361, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff2150d3000
+close(3)                                = 0
+open("/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=26258, ...}) = 0
+mmap(NULL, 26258, PROT_READ, MAP_SHARED, 3, 0) = 0x7ff215131000
+close(3)                                = 0
+futex(0x7ff214cee8c8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+write(2, "mkdir: ", 7mkdir: )                  = 7
+write(2, "falta un operando", 17falta un operando)       = 17
+write(2, "\n", 1
+)                       = 1
+write(2, "Pruebe 'mkdir --help' para m\303\241s "..., 46Pruebe 'mkdir --help' para más información.
+) = 46
+close(1)                                = 0
+close(2)                                = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
+
+Observaciones: 
+Me dí cuenta de que mientras se crea el archivo, constantemente se está solicitando informacion del sistema de archivos, asi como tambien bastantes movimientos en la memoria.
