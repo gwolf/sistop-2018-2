@@ -1,5 +1,18 @@
 #!/usr/bin/python
 # *-* coding: utf-8
+#
+# En este archivo tenemos una implementación de barrera derivada de la
+# que presenta patron_barrera.py, modificada para volver a cerrar la
+# barrera después de dejar pasar a los n hilos.
+#
+# Presenta aún un problema lógico: Funciona mientras se mantiene el
+# flujo de hilos, pero al final se queda colgada porque necesariamente
+# se queda esperando a barrera.acquire() cuando hilos==0.
+#
+# ¿Puedes resolverlo antes de vacaciones de Semana Santa? Si sí,
+# cuenta de forma equivalente a un 10 en una práctica adicional para
+# el primero que lo entregue (el primer pull request abierto), y como
+# un 8 para los siguientes 3.
 from threading import Semaphore, Thread
 from random import random
 from time import sleep
