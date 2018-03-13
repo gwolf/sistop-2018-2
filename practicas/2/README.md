@@ -104,3 +104,52 @@ clase. Esto es:
   llamada al sistema, etc. Pueden jugar con esta salida
   también. ¿Encontraron algo interesante especificando estas opciones?
 
+## Algunas respuestas a los alumnos
+
+Algunos de ustedes me dejaron varios comentarios abiertos en la tarea,
+aparentemente esperando mi respuesta. ¡Muy bien! No los dejaré con la
+palabra en la boca. En órden alfabético,
+
+- [Alejandro Espejel](EspejelAlejandro/Practica2): Muy bueno. Sí,
+  sería ridículo que yo les pidiera entrar al nivel de detalle que
+  presentaste en *todas* las llamadas. Cubre perfectamente lo que
+  buscábamos.
+
+- [Juan Flores](./FloresJuan/practica2.pdf): Bien. Sí, hay muchos
+  puntos pendientes de revisar. Y no, no vamos a cubrirlos todos. Pero
+  si tienes curiosidad, `man` es tu amigo :-]
+
+- [Marcos López](./LopezMarcos/Practica2.pdf): No entregaste la
+  práctica correctamente, no subiste el archivo (¿sólo una referencia
+  a él?)
+
+- [Rubén Lozano](LozanoRuben/practica2.txt): Buen reporte. Buenas
+  conclusiones. Un par de interpretaciones erróneas, pero no podría yo
+  exigir que comprendan todo lo que pasa a ese nivel (yo no lo
+  lograría).
+
+- [Ernesto Ochoa](./OchoaLuis/practica_2.pdf): ¡Muy buen e interesante
+  reporte! Me gustaría ver un poco más la salida de `dtrace`. Pero me
+  gusta cómo te enfrentaste con el error y lo resolviste.
+
+- [Andrew Sánchez](./SanchezAndrew/DepuracionPorTraza.odt): Buen
+  trabajo. Preguntas respecto a `fstat64` y `lstat64` — Ambas
+  funciones te dan información general de los metadatos
+  respectivamente de un archivo y de una *liga simbólica*; ya luego
+  abordamos a detalle el qué y el por qué de estas llamadas. Lo
+  importante de que sean la versión `64` es el tamaño máximo de
+  archivos que soportan los sistemas de archivo actuales: En un
+  sistema de archivos puro de 32 bits, sería complicado representar el
+  tamaño de un archivo de más de 4GB (2³² bits). Preguntas también
+  respecto a `getrlimit`; esta es una llamada que le pregunta al
+  sistema operativo respecto a los límites de ejecución que tiene el
+  usuario actual (particularmente, uso de memoria, número máximo de
+  archivos abiertos y procesos en ejecución, etc.)
+
+- [Eduardo Valdez](./ValdezEduardo/Practica_02.pdf): ¡Ojo! Por lo que
+  mencionas, parecería que entiendes que cada una de las cadenas
+  mostradas (p.ej. `init     Create an empty Gi"...`) invoca a la
+  función en cuestión. ¡No! La llamada en todos estos casos es un
+  `write` al descriptor de archivos `1`, esto es, es la "ayuda corta"
+  de Git mostrándote cómo puede ser invocado. Pero son únicamente
+  cadenas enviadas a la terminal.
