@@ -61,3 +61,7 @@ Pueden entregar la tarea hecha en papel y fotografiada/scanneada;
 pueden hacerla directamente en la computadora.
 
 La entrega es *individual*.
+
+## Calificaciones
+
+[Disponibles en el archivo calificaciones.org](./calificaciones.org)
