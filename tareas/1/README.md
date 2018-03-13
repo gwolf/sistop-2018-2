@@ -62,6 +62,6 @@ pueden hacerla directamente en la computadora.
 
 La entrega es *individual*.
 
-## Calificaciones
+## Calificaciones y comentarios
 
 [Disponibles en el archivo calificaciones.org](./calificaciones.org)
