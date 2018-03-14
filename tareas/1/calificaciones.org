@@ -129,6 +129,14 @@ modelos has realizado? ¿Tienes idea cómo acercarte a los demás?
                    mapa conceptual ni cuadro sinóptico). Yo caigo
                    mucho también en ese vicio...
 
+- Eduardo Tolentino ::
+  - Archivo :: [[./TolentinoEduardo/T1.pdf]]
+  - Comentarios :: Entrega tardía, vale 0.8.
+
+		   Me gusta cómo lo desarrollas (especialmente la
+                   parte inferior), poniendo énfasis en la progresión
+                   de modelos secuencial → concurrente → distribuido.
+
 - Eduardo Valdez ::
   - Archivo :: [[./ValdezEduardo/Mapa_conceptual.pdf]]
   - Comentarios :: Me cuesta un poco seguir la lógica del sentido de
