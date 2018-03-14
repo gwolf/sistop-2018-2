@@ -1,0 +1,146 @@
+#+title: Tarea 1 • Calificaciones
+#+author: Gunnar Wolf
+
+Dado que esta tarea es únicamente un /control de lectura/, no puedo
+asignar calificación "real" a cada uno; las tareas son calificadas con
+10 si cubren mayormente los puntos que indiqué.
+
+En general, el siguiente comentario lo aplico a casi todas sus
+entregas (¡todas menos dos!), y lo presento sólo una vez para evitar
+repeticiones aburridas:
+
+#+BEGIN_QUOTE
+Me gustaría conocer la experiencia de cada uno de ustedes, como
+menciono en el primer punto del planteamiento — ¿Cuáles de estos
+modelos has realizado? ¿Tienes idea cómo acercarte a los demás?
+#+END_QUOTE
+
+- Laura Buendía ::
+  - Archivo :: [[./BuendiaLaura/mapa.pdf]]
+  - Comentarios :: Buen resumen.
+
+- Yair Cortés ::
+  - Archivo :: [[./CortesYair/tareauno.pdf]]
+  - Comentarios :: Muy conciso, aunque muy enfocado a la parte medular
+                   del artículo, la programación distribuida, sin
+                   entrar en la concurrencia (que mencioné en mis
+                   instrucciones). Buen trabajo, de todos modos.
+
+- Julio del Castillo ::
+  - Archivo :: [[./DelCastilloJulio/Tarea1.pdf]]
+  - Comentarios :: Buen resumen. Es un poco confuso "navegar" por un
+                   mapa con rutas múltiples, pero... Se puede :-]
+
+- Alejandro Espejel ::
+  - Archivo :: [[./EspejelAlejandro/Tarea1.pdf]]
+  - Comentarios :: Detallitos de ortografía (¿«a travez de»?
+                   ¡«través»!). Me gusta cómo presentas el avance en
+                   complejidad secuencial → concurrente → paralelo.
+
+- Juan Flores ::
+  - Archivo :: [[./FloresJuan/tarea1SO.pdf]]
+  - Comentarios :: Problema de anidamiento en tu árbol: El segundo
+                   comentario que haces respecto a «Programación
+                   secuencial» habla de una /partición/ entre los
+                   procesos en un sistema. ¡Sólo puede haber tal si
+                   estás ya empleando programación concurrente o
+                   distribuida! (y muuuuuy rara vez en
+                   concurrente... ¡Hablaría de un fallo casi
+                   catastrófico del sistema!). Cubres bien el tema
+                   desarrollado.
+
+- Marcos López ::
+  - Archivo :: [[./LopezMarcos/Tarea1.pdf]]
+  - Comentarios :: ¡Uy! ¡Qué elección de colores! Bastante difícil de
+                   leer :-P
+
+		   En general, hay lenguajes que /facilitan/ la
+                   programación concurrente o distribuida... Pero el
+                   texto que les di no los caracteriza como /lenguajes
+                   concurrentes/ o /lenguajes distribuidos/, emplean
+                   bibliotecas y métodos distintos para distribuir sus
+                   cargas.
+
+		   Fuera de esa apreciación, un buen trabajo.
+
+- Rubén Lozano ::
+  - Archivo :: [[./LozanoRuben/tarea1.pdf]]
+  - Comentarios :: ¡Qué mapa tan lineal! ☺ (Claro, la lectura del
+                   artículo es también lineal... Pero los conceptos se
+                   "anidan" bastante). Tu resumen no "gana" mucho de
+                   haberlo presentado pseudo-gráficamente.
+
+- Luis Ochoa ::
+  - Archivo :: [[./OchoaLuis/TAREA_1.pdf]]
+  - Comentarios :: Amplio y detallado, aunque parte del ejercicio de
+                   un mapa conceptual es buscar ser conciso ☺ Como le
+                   dije a algún compañero de semestres anteriores,
+                   este más que mapa conceptual parece mapa de
+                   carreteras ;-)
+
+		   MVC /no/ es una estrategia para la concurrencia /
+                   distribución (detallo más en el apartado de
+                   Alejandro Ramírez), aunque facilita encontrar
+                   "líneas de corte", pero se sigue presentando
+                   fuertemente acoplado. Pero, estoy de acuerdo — La
+                   práctica es el camino ☺
+
+		   Buen resumen.
+
+- Alejandro Ramírez ::
+  - Archivo :: [[./RamirezAlejandro/TAREA1.odt]]
+  - Comentarios :: MVC /no es/ una estrategia para la concurrencia /
+                   distribución. Probablemente Luis Ochoa y tú lo
+                   presentan porque es común presentar sistemas Web
+                   desarrollados con MVC dado que el /servidor de
+                   aplicaciones/ lanza varias instancias de un
+                   proceso para atender las solicitudes, y cada una de
+                   dichas instancias se ejecuta de forma concurrente —
+                   Aunque la programación que haces para ésta es
+                   /casi/ siempre secuencial.
+
+		   El resumen es bueno, aunque la forma de entrega es
+                   a texto corrido (no cabría siendo estrictos como
+                   mapa conceptual ni cuadro sinóptico). Yo caigo
+                   mucho también en ese vicio...
+
+- Andrew Sánchez ::
+  - Archivo :: [[./SánchezAndrew/SánchezAndrew.odt]]
+  - Comentarios :: Con /almacenamiento mutable/ (no /mudable/) nos
+                   referimos a que el /contenido/ de la memoria puede
+                   cambiar (manejo de variables), no que la dirección
+                   de memoria donde lo encontramos va a ir cambiando.
+
+		   ¡Ojo con el concepto /tiempo real/! No lo hemos
+                   abordado aún... Pero como tantas otras cosas, tiene
+                   un significado específico. ¡No lo confundas con "en
+                   vivo"!
+
+		   ¿Es realmente una /ventaja/ que un error lleve a un
+                   fallo parcial? Casi siempre, eso requiere de
+                   detección para saber cómo enfrentarlo. Estoy de
+                   acuerdo en que puede verse como una ventaja, pero
+                   sin un programador competente a cargo, se convierte
+                   en una "ventaja a medias".
+
+		   El resumen es bueno, aunque te hago la misma nota
+                   que a Alejandro Ramírez:  la forma de entrega es
+                   a texto corrido (no cabría siendo estrictos como
+                   mapa conceptual ni cuadro sinóptico). Yo caigo
+                   mucho también en ese vicio...
+
+- Eduardo Tolentino ::
+  - Archivo :: [[./TolentinoEduardo/T1.pdf]]
+  - Comentarios :: Entrega tardía, vale 0.8.
+
+		   Me gusta cómo lo desarrollas (especialmente la
+                   parte inferior), poniendo énfasis en la progresión
+                   de modelos secuencial → concurrente → distribuido.
+
+- Eduardo Valdez ::
+  - Archivo :: [[./ValdezEduardo/Mapa_conceptual.pdf]]
+  - Comentarios :: Me cuesta un poco seguir la lógica del sentido de
+                   tus flechas. Cubres bien la mayor parte de los
+                   puntos relevantes a la programación distribuida,
+                   aunque no tocas en ningún punto a la concurrente
+                   (ni secuencial).
