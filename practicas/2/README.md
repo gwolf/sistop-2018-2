@@ -146,6 +146,11 @@ palabra en la boca. En órden alfabético,
   usuario actual (particularmente, uso de memoria, número máximo de
   archivos abiertos y procesos en ejecución, etc.)
 
+- [Eduardo Tolentino](./TolentinoEduardo/P2.pdf): Entrega
+  muy tardía, no puedo ya darte puntos por ella ☹. Reporte correcto,
+  aunque mencionas únicamente cuatro llamadas utilizadas (aunque, sí,
+  el programa las realiza varias veces).
+
 - [Eduardo Valdez](./ValdezEduardo/Practica_02.pdf): ¡Ojo! Por lo que
   mencionas, parecería que entiendes que cada una de las cadenas
   mostradas (p.ej. `init     Create an empty Gi"...`) invoca a la
