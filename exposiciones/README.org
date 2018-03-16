@@ -6,7 +6,10 @@ La evaluación de las exposiciones sigue los criterios descritos en las
 [[http://gwolf.sistop.org/rubricas.pdf][rúbricas del curso]], particularmente el apartado 2 (Exposición frente
 al grupo)
 
-|-------+------+-------------+------------+------------|
-| Fecha | Tema | Integrantes | Documentos | Evaluación |
-|-------+------+-------------+------------+------------|
-|-------+------+-------------+------------+------------|
+|--------+---------------------+----------------------------------+------------+------------|
+| Fecha  | Tema                | Integrantes                      | Documentos | Evaluación |
+|--------+---------------------+----------------------------------+------------+------------|
+| 19/mar | Git como blockchain | Ana Castellanos y Andrew Sánchez |            |            |
+| 3/abr  | Keyloggers          | Ernesto Ochoa                    |            |            |
+| 5/abr  |                     | Eduardo Valdez                   |            |            |
+|--------+---------------------+----------------------------------+------------+------------|
