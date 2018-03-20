@@ -1,0 +1,17 @@
+**El problema que se decidió resolver: De gatos y ratones
+
+**El lenguaje en el que se desarrollo es PYTHON en su versión 3.6.4
+
+**La estrategia de sincronización que se usó para resolver el problema fue la implementación de semáforos 
+bajo el patrón de un mutex
+
+se usaron un par de mutex para tratar de lograr una sincronización entre los gatos y los ratones 
+
+**Tratamos de dar una solución usando el patrón de mutex empleando el uso de semáforos, ciertamente pensamos que
+no es tan sencillo lograr la sincronización de hilos, pues no estamos totalmente seguros de que nuestra 
+solución no caiga en la inanición. Pero lo que si observamos fue que los gatos y ratones no comen al mismo tiempo gracias al mutex. 
+
+
+
+
+
