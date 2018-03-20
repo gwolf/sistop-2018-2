@@ -1,0 +1,9 @@
+- Gatos y ratones.
+
+- Lenguaje: Python - ejecute desde la terminal de Ubuntu 14.04 LTS
+
+- En mi caso use Señales para que los gatos y ratones se fueran comunicando a la hora de estar comiedo, si llega un ratón a comer ("raton comiendo") señala al gato cuando termine de comer, si el gato llega primero ("gato comiedo") y luego llega un ratón este se come al ratón ("que rico raton") al suceder esto se puede ver que el siguiente ratón tiene el mismo número (de esta manera los voy identificando) al anterior, pues el anterior se lo come el gato y el siguiente ratón tiene el mismo número (identificador).
+
+- No hay refinamientos
+
+- A decir verdad siento que podría mejorar el programa, haciendo que se vea que gato come de cual plato, pues mi programa toma el orden de los gatos y ratones a la hora de comer, pues se toma el plato creado anterior mente para que estos coman. Dudas tengo muchas al respecto de programar hilos y el uso de semáforos, pues es la primera vez que los uso en cualquier lenguaje de programación, y mi programa lo hice con lo que e aprendido en su clase, si tiene algun documento adicional a la clase para que pueda aprender mejor el uso y manejo de estas estare muy agradecido, las estudiaria por mi cueta, pues la información que encontre en la web la verdad me confundía en lugar de ayudar. De antemano muchas gracias. :) 
