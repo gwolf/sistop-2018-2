@@ -1,0 +1,13 @@
+EQUIPO
+Buendía Monroy Laura Lizeth
+Trejo Vasquez Efren
+
+El programa fue hecho en python, para compilarlo puede guardar el archivo en su escritorio y desde el comando poderlo probar, así le hicimos ya que ninguno tiene 
+linux en su computadora, en caso de tener una aplicación, pues se puede así también.
+Resumiendo
+ Para este programa usamos 3 mutex uno para proteger a los hackerslinux y otra para proteger a los Serfsmicro y otro mutex para proteger a los pasajeros, 
+usamos un semáforo para controlar al cuarto pasajero que sube, y poder liberar más lugares.
+
+
+ 
+
