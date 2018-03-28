@@ -1,7 +1,10 @@
 # README para la presentación: Alguien dijo Keylogger?
-<div style="text-align: center">
+<center>
+
 ![Python logo](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
-</div>
+
+</center>
+
 
 
 CREADO POR: 
@@ -90,11 +93,12 @@ El código de los programas fueron obtenidos del libro **Learning Python for For
 
 La presentación pueden utilizarla como parte de la norma de
  _Creative Commons Attribution 4.0 International_
-([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
+ 
+[CC BY 4.0](https://creativecommons.org/licenses/?lang=es)
 
-Así que la puedes copiar, editar y hacer lo que quieras siempre y cuando pongas una referencia a su creador.
+![CC BY ](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
 
-![CC BY 4.0](./CCBY4.0_88x31.png "CC BY 4.0")
+
 
 Puedes [consultar el texto completo de la licencia](./COPYING.md).
 
