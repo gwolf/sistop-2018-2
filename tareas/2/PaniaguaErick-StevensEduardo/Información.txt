@@ -1,0 +1,1 @@
+* El problema fue El servidor Web.* El lenguaje fue Python y se tiene que copiar y pegar el c—digo que est‡ en el archivo txt en un interprete de Python.* La estrategia de sincronizaci—n fue torniquete.* El problema no termino de quedar
