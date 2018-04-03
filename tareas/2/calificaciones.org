@@ -1,0 +1,81 @@
+#+title: Tarea 2 • Calificaciones
+#+author: Gunnar Wolf
+
+- Laura Buendía y Efrén Trejo ::
+  - Problema elegido :: El cruce del río
+  - Documentación :: [[./BuendiaLaura-TrejoEfren/Equipo.txt]]
+  - Código :: [[./BuendiaLaura-TrejoEfren/linuxvsmicro.py]]
+  - Lenguaje :: Python
+  - Estrategia ::
+  - Comentarios ::
+    Primero precisiones a la documentación:
+
+    - En primer lugar, Python no se compila como un
+      paso explícito; el lenguaje compila a memoria y
+      ejecuta (ojo, ¡no es lo mismo que /interpretar/!)
+    - En segundo lugar, Python es un lenguaje multiplataforma, pueden
+      ejecutarlo desde Windows. Es posible que haya algunas
+      diferencias en el modelo de procesos que podrían tener algún
+      impacto para este ejercicio, pero como sea, podrían utilizarlo
+      perfectamente en su entorno favorito.
+
+    La ejecución del ejercicio es exitosa. ¡Bien!
+
+    Ahora sí, respecto al ejercicio implementado:
+    - ¡El código carece por completo de comentarios! Es importante
+      explicar (para mi, para ustedes mismos, para El Futuro™) lo que
+      hacen, sobre todo si emplean estructuras poco habituales.
+    - Hay una máxima de la programación — DRY. /Don't Repeat
+      Yourself/. No te repitas.
+
+      Las funciones =hackerlinux()= y =serfmicro()= son prácticamente
+      idénticas. O más bien, su lógica es idéntica, pero intercambian
+      el /sentido/ en el que operan. Yo se que este es un ejercicio
+      corto y rápido, pero les sugiero desarrollar la costumbre de
+      /parametrizar/ este tipo de funciones: Tal vez si comenzara con:
+      #+BEGIN_SRC python
+      nums = {'hackers' : 0, 'serfs' : 0} # en vez de numHackerslinux y numSerfsmicro
+      # (...)
+      def llegaPersona(tipo):
+        if tipo == 0: # Linux
+	  mi_fila = filaHackers
+	  otra_fila = filaSerfs
+	  aumentar = 'hackers'
+	else:
+	  mi_fila = filaSerfs
+	  otra_fila = filaHackers
+	  aumentar = 'serfs'
+      #+END_SRC
+      Con un /poquito/ de trabajo adicional podrían tener a ambas
+      funciones convertidas en una sola. Aumenta la legibilidad,
+      aumenta la claridad, y mejora la mantenibilidad.
+
+    ¡Bien solucionado!
+  - Calificación :: 10
+
+- Yair Cortés y Juan Flores ::
+  - Problema elegido :: Gatos y ratones
+  - Documentación :: [[./CortesYair-FloresJuan/Ejercicio_de_sincronizacion.txt]]
+  - Código :: [[./CortesYair-FloresJuan/tarea_2.py]]
+  - Lenguaje :: Python 3
+  - Estrategia ::
+  - Comentarios ::
+  - Calificación ::
+
+- Víctor Hernández ::
+  - Problema elegido :: El cruce del río
+  - Documentación :: [[./Hern-ndezVictor/HernandezVictor]]
+  - Código :: [[./Hern-ndezVictor/HernandezVictor.py]]
+  - Lenguaje :: Python
+  - Estrategia ::
+  - Comentarios ::
+  - Calificación ::
+
+- Andrew Sánchez ::
+  - Problema elegido :: Gatos y ratones
+  - Documentación :: [[./SánchezAndrew/gatos_ratones.py]]
+  - Código :: [[./SánchezAndrew/ReporteTareaDos]]
+  - Lenguaje :: Python
+  - Estrategia ::
+  - Comentarios ::
+  - Calificación ::

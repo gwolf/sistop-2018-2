@@ -68,3 +68,7 @@ Ojo: Recuerden que les pido que lo entreguen _incluso si no les
 funciona perfectamente_ (o incluso si no les funciona,
 punto). Intentar resolver el problema tiene mérito, independientemente
 de si lo logran. ¡Me comprometo a buscar resolver sus dudas!
+
+## Calificaciones y comentarios
+
+[Disponibles en el archivo calificaciones.org](./calificaciones.org)

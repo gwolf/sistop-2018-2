@@ -49,6 +49,12 @@ modelos has realizado? ¿Tienes idea cómo acercarte a los demás?
                    catastrófico del sistema!). Cubres bien el tema
                    desarrollado.
 
+- Ivan Hernández ::
+  - Archivo :: [[./HernandezIvan/tarea1.docx]]
+  - Comentarios :: Entrega tardía, vale 0.8.
+
+		   Un poquito mínimo, pero a fin de cuentas correcto.
+
 - Marcos López ::
   - Archivo :: [[./LopezMarcos/Tarea1.pdf]]
   - Comentarios :: ¡Uy! ¡Qué elección de colores! Bastante difícil de
@@ -128,6 +134,13 @@ modelos has realizado? ¿Tienes idea cómo acercarte a los demás?
                    a texto corrido (no cabría siendo estrictos como
                    mapa conceptual ni cuadro sinóptico). Yo caigo
                    mucho también en ese vicio...
+
+- Efrén Trejo ::
+  - Archivo :: [[./TolentinoEduardo/T1.pdf]]
+  - Comentarios :: Me parece un buen resumen, aunque tal vez un poco
+                   enfocado en los conceptos a un "último nivel", no
+                   cubre el por qué de los retos que abordan los
+                   lenguajes y tecnologías en cuestión.
 
 - Eduardo Tolentino ::
   - Archivo :: [[./TolentinoEduardo/T1.pdf]]
