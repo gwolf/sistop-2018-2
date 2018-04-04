@@ -9,7 +9,7 @@ al grupo)
 |--------+---------------------+----------------------------------+------------+------------|
 | Fecha  | Tema                | Integrantes                      | Documentos | Evaluación |
 |--------+---------------------+----------------------------------+------------+------------|
-| 19/mar | Git como blockchain | Ana Castellanos y Andrew Sánchez |            |            |
-| 3/abr  | Keyloggers          | Ernesto Ochoa                    |            |            |
-| 5/abr  |                     | Eduardo Valdez                   |            |            |
+| 3/abr  | Keyloggers          | Ernesto Ochoa                    |            | [[./OchoaLuis-PalomequeJose/evaluacion.org][Evaluación]] |
+| 5/abr  | Git como blockchain | Ana Castellanos y Andrew Sánchez |            |            |
+| 10/abr | SPECTRE y Meltdown  | Eduardo Valdez                   |            |            |
 |--------+---------------------+----------------------------------+------------+------------|
