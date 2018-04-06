@@ -193,7 +193,7 @@
       práctica... Sólo... Hacerlo una y otra vez. Pero podemos revisar
       juntos el problema que quieras. Y tengo bastante bibliografía,
       pero más bien teórica, si te interesa.
-- Calificación :: 9
+  - Calificación :: 9
 
 - Eduardo Valdez ::
   - Problema elegido :: El cruce del río

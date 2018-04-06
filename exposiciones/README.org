@@ -6,10 +6,10 @@ La evaluación de las exposiciones sigue los criterios descritos en las
 [[http://gwolf.sistop.org/rubricas.pdf][rúbricas del curso]], particularmente el apartado 2 (Exposición frente
 al grupo)
 
-|--------+---------------------+----------------------------------+------------+------------|
-| Fecha  | Tema                | Integrantes                      | Documentos | Evaluación |
-|--------+---------------------+----------------------------------+------------+------------|
-| 3/abr  | Keyloggers          | Ernesto Ochoa                    |            | [[./OchoaLuis-PalomequeJose/evaluacion.org][Evaluación]] |
-| 5/abr  | Git como blockchain | Ana Castellanos y Andrew Sánchez |            |            |
-| 10/abr | SPECTRE y Meltdown  | Eduardo Valdez                   |            |            |
-|--------+---------------------+----------------------------------+------------+------------|
+|--------+--------------------------+----------------------------------+------------+------------|
+| Fecha  | Tema                     | Integrantes                      | Documentos | Evaluación |
+|--------+--------------------------+----------------------------------+------------+------------|
+| 3/abr  | Alguien dijo Keyloggers? | Ernesto Ochoa                    |            | [[./OchoaLuis-PalomequeJose/evaluacion.org][Evaluación]] |
+| 10/abr | SPECTRE y Meltdown       | Eduardo Valdez                   |            |            |
+| 12/abr | Git como blockchain      | Ana Castellanos y Andrew Sánchez |            |            |
+|--------+--------------------------+----------------------------------+------------+------------|
