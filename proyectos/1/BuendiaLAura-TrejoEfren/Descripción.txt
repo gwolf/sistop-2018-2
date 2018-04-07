@@ -1,0 +1,17 @@
+Integrantes:
+Buendia Monroy Laura Lizeth
+Trejo Vazquez Efren
+Grupo: 2
+Sistemas Operativos
+
+Monitor de Sistema
+
+El proyecto fue realizado en Windows, y nos costó un poco de trabajo por buscar los comandos que nos facilitara la información 
+de la computadora, el programa esta hecho muy básico, de igual manera, si lo logramos completar más, sería bueno mostrarselo, aunque sea 
+por práctica solamente.
+Tuvimos uso de multihilos, en los procesos.
+Está programado en Python27
+
+
+Finalmente para correr el programa lo podemos hacer desde comando o alguna consola. 
+
