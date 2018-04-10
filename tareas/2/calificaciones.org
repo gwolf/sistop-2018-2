@@ -159,7 +159,26 @@
   - Lenguaje :: Python
   - Comentarios ::
     - Entrega extemporánea (sobre 80%)
-  - Calificación ::
+    - La función =jefe()= implementa básicamente una barrera (aunque
+      con un poco de lógica invertida — En su condicional están
+      verificando que el contador sea /distinto/ del número deseado de
+      hilos, cuando a esa condición debe entrarse cuando sea /igual/.
+    - A nivel conceptual: Debe haber /un/ jefe y /muchos/
+      trabjadores. Asumiendo que el hilo principal fuera el jefe, yo
+      sugeriría renombrar la función =jefe()= por =trabajador()=, y
+      para las dos líneas finales:
+      #+BEGIN_SRC python
+	# Recuerden, el jefe se mantiene vivo, no se limita a que existan diez
+	# hijos...
+	while True:
+	  # (...Alguna "magia" para que pase la cantidad de hilos necesarios
+	  # pero no más...)
+	  Thread(target=trabajador, args=[conexion, mutex]).start()
+      #+END_SRC
+    - Definen la función =Conexion_red()=, pero no la llaman nunca...
+    - No llegan a delinear una estrategia que funcione, me cuesta
+      encontrar desde dónde corregir para mejorar su código ☹
+  - Calificación :: 6 × 0.4 = 5.6
 
 - Andrew Sánchez ::
   - Problema elegido :: Gatos y ratones
@@ -202,4 +221,38 @@
   - Lenguaje :: Python
   - Comentarios ::
     - Entrega extemporánea (sobre 80%)
-  - Calificación ::
+    - No resuelve el problema planteado ☹
+      - Permite la creación de balsas demasiado ligeras que se volcarían
+	#+BEGIN_SRC text
+	  ¿Cuántos Serfs(Microsoft) abordarán la balsa?: 1
+	  ¿Cuántos Hackers(GNU-Linux) abordarán la balsa?: 2
+
+	  Ok, balanceo de desarrolladores justo :)
+	  Enviando balsa...
+
+	  Bienvenidos:  
+	  [['Hacker_Numero.0', 'Hacker_Numero.1'], ['Serf_Numero.0'], ['Hacker_Numero.0', 'Hacker_Numero.1'], ['Serf_Numero.0']]
+	#+END_SRC
+      - Permite que haya balsas demasiado llenas, arriesgando que se
+        hundan por sobrepeso:
+	#+BEGIN_SRC text
+	  ¿Cuántos Serfs(Microsoft) abordarán la balsa?: 11
+	  ¿Cuántos Hackers(GNU-Linux) abordarán la balsa?: 1
+
+	  Ok, balanceo de desarrolladores justo :)
+	  Enviando balsa...
+
+	  Bienvenidos:  
+	  [['Hacker_Numero.0'], ['Serf_Numero.0', 'Serf_Numero.1', 'Serf_Numero.2', 'Serf_Numero.3', 'Serf_Numero.4', 'Serf_Numero.5', 'Serf_Numero.6', 'Serf_Numero.7', 'Serf_Numero.8', 'Serf_Numero.9', 'Serf_Numero.10'], ['Hacker_Numero.0'], ['Serf_Numero.0', 'Serf_Numero.1', 'Serf_Numero.2', 'Serf_Numero.3', 'Serf_Numero.4', 'Serf_Numero.5', 'Serf_Numero.6', 'Serf_Numero.7', 'Serf_Numero.8', 'Serf_Numero.9', 'Serf_Numero.10']]
+	#+END_SRC
+      - Si cada arreglo interno es una balsa resultante, nunca permite
+        mezclas de 2+2. (O... ¿Cómo debo leer la salida?)
+    - Con más de cuatro pasajeros, el programa siempre se congela y
+      debe ser terminado por la fuerza.
+    - Cada invocación a =autorizar_balsa()= decrementa a
+      =semaforo_hacker= y a =semaforo_serf= (dependiendo de la
+      capacidad de la balsa, no de la identidad del que llegó). No
+      termino de comprender la lógica que intenta seguir esta
+      función.
+
+  - Calificación :: 6 × 0.8 = 5.6
