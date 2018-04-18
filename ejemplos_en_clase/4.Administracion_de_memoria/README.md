@@ -49,3 +49,18 @@
     [ligado.o.dump](./ligado.o.dump),
     [ligado2.o.dump](./ligado2.o.dump) y [ligado.dump](./ligado.dump).
 
+2. Al entrar al tema de *paginación*, hicimos un programita llamado
+   [asignando.c](./asignando.c), que muestra el funcionamiento de
+   `malloc()` sobre la sección de libres: Cada medio segundo, el
+   programa solicita la asignación (mediante `malloc(sizeof(int))`) de
+   un entero (4 bytes).
+
+   Ejecutamos este programa (`./a.out`), y desde otra terminal
+   lanzamos `watch -n 0.2 pmap $(pidof a.out)` (¿qué hace esta línea?
+   `pidof a.out` entrega el ID del proceso en que se ejecuta `a.out`;
+   `$(…)` captura el resultado de ese comando y lo pasa como
+   argumento a `pmap`, que presenta el mapa de memoria del proceso
+   especificado, y mediante `watch` ejecutamos esto cada ⅕ de segundo)
+
+   Vean cómo crece la sección de libres — La sección anónima más baja
+   en la memoria.
