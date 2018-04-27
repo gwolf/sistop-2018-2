@@ -1,0 +1,7 @@
+El problema elegido es el de "El servidor web"
+
+Lenguaje: Python. versión. 3.6.4.
+
+Se necesita un intérprete y compilador de Python
+
+Estrategia: Torniquete-Mutex.

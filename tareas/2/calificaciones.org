@@ -1,0 +1,258 @@
+#+title: Tarea 2 • Calificaciones
+#+author: Gunnar Wolf
+
+- Laura Buendía y Efrén Trejo ::
+  - Problema elegido :: El cruce del río
+  - Documentación :: [[./BuendiaLaura-TrejoEfren/Equipo.txt]]
+  - Código :: [[./BuendiaLaura-TrejoEfren/linuxvsmicro.py]]
+  - Lenguaje :: Python
+  - Comentarios ::
+    Primero precisiones a la documentación:
+
+    - En primer lugar, Python no se compila como un
+      paso explícito; el lenguaje compila a memoria y
+      ejecuta (ojo, ¡no es lo mismo que /interpretar/!)
+    - En segundo lugar, Python es un lenguaje multiplataforma, pueden
+      ejecutarlo desde Windows. Es posible que haya algunas
+      diferencias en el modelo de procesos que podrían tener algún
+      impacto para este ejercicio, pero como sea, podrían utilizarlo
+      perfectamente en su entorno favorito.
+
+    La ejecución del ejercicio es exitosa. ¡Bien!
+
+    Ahora sí, respecto al ejercicio implementado:
+    - ¡El código carece por completo de comentarios! Es importante
+      explicar (para mi, para ustedes mismos, para El Futuro™) lo que
+      hacen, sobre todo si emplean estructuras poco habituales.
+    - Hay una máxima de la programación — DRY. /Don't Repeat
+      Yourself/. No te repitas.
+
+      Las funciones =hackerlinux()= y =serfmicro()= son prácticamente
+      idénticas. O más bien, su lógica es idéntica, pero intercambian
+      el /sentido/ en el que operan. Yo se que este es un ejercicio
+      corto y rápido, pero les sugiero desarrollar la costumbre de
+      /parametrizar/ este tipo de funciones: Tal vez si comenzara con:
+      #+BEGIN_SRC python
+      nums = {'hackers' : 0, 'serfs' : 0} # en vez de numHackerslinux y numSerfsmicro
+      # (...)
+      def llegaPersona(tipo):
+        if tipo == 0: # Linux
+	  mi_fila = filaHackers
+	  otra_fila = filaSerfs
+	  aumentar = 'hackers'
+	else:
+	  mi_fila = filaSerfs
+	  otra_fila = filaHackers
+	  aumentar = 'serfs'
+      #+END_SRC
+      Con un /poquito/ de trabajo adicional podrían tener a ambas
+      funciones convertidas en una sola. Aumenta la legibilidad,
+      aumenta la claridad, y mejora la mantenibilidad.
+
+    ¡Bien solucionado!
+  - Calificación :: 10
+
+- Yair Cortés y Juan Flores ::
+  - Problema elegido :: Gatos y ratones
+  - Documentación :: [[./CortesYair-FloresJuan/Ejercicio_de_sincronizacion.txt]]
+  - Código :: [[./CortesYair-FloresJuan/tarea_2.py]]
+  - Lenguaje :: Python 3
+  - Comentarios ::
+    - Ya que lo comentan en su documentación: La inanición es un
+      problema importante a considerar y tener en mente, pero es /muy
+      difícil/ probar que estemos completamente librados de ella (o
+      incluso, de encontrar un patrón problemático que la genere).
+
+    - Hay cosas que jamás deberían ocurrir. Y a veces nos pasan por
+      ser medio /puercos/, como lo vimos en clase. En un código real,
+      algo como esto /jamás debería ser necesario/:
+      #+BEGIN_SRC python
+      if comiendo < 0:#esto se hace porque algunas veces la variable comiendo tomaba valores negativos
+          comiendo=0
+      #+END_SRC
+
+    - ¡Bien! Veo que la solución que implementaron no es (como lo
+      dicen en la documentación) de simple mutex (que sí es un uso
+      subóptimo de recursos, y sí es inanición), sino que es de
+      exclusión categórica (patrón /apagador/).
+
+    - Hay una cosa rara en el código: La acción de comer es
+      instantánea. Ni gatos ni ratones pasan tiempo suficiente frente
+      a sus platos como para que pase nada muy interesante. La demora
+      que insertan en la inicialización de cada uno de ellos no
+      resulta (creo) muy útil, pero vendría bien demorar un poco
+      después del =if comiendo= dentro de tanto =gato()= como
+      =raton()=
+
+    - ...Y el programa dificulta un poco el llevar registro de qué
+      está pasando en realidad. Por ejemplo, sería bueno decir (en el
+      =print()= dentro de la condicional mencionada o algo por el
+      estilo), por ejemplo, =hay 3 gatos comiendo en este momento=
+      (para poder verificar desde afuera que varios puedan entrar a la
+      vez, y que no se rompan las condiciones establecidas.
+
+      - Haciendo las modificaciones que menciono y silenciando las
+        inicializaciones, obtuve la siguiente salida:
+
+	#+BEGIN_SRC text
+
+          ,*Puede alguien comerse el plato (0.674)
+        		  Soy el RATON (0.344) tengo hambre, voy a comer! (0.787). Hay 1 comelones.
+          ,*Puede alguien comerse el plato (0.059)
+        	  Soy el GATO (0.547) tengo hambre, me estoy comiendo el plato (0.083). Hay 1 comelones.
+          ,*Puede alguien comerse el plato (0.860)
+        		  Soy el RATON (0.061) tengo hambre, voy a comer! (0.339). Hay 1 comelones.
+          ,*Puede alguien comerse el plato (0.341)
+        	  Soy el GATO (0.127) tengo hambre, me estoy comiendo el plato (0.407). Hay 1 comelones.
+          ,*Puede alguien comerse el plato (0.802)
+        		  Soy el RATON (0.129) tengo hambre, voy a comer! (0.831). Hay 1 comelones.
+	#+END_SRC
+
+    - Por tanto... Observamos que sí caemos en la inanición (sólo un
+      animal, sea del tipo que sea, puede comer a la vez
+      independientemente del número de platos disponible
+
+      - Haría falta hacer un análisis más a fondo para encontrar por
+        qué no operó correctamente el apagador.
+  - Calificación :: 8
+
+- Víctor Hernández ::
+  - Problema elegido :: El cruce del río
+  - Documentación :: [[./Hern-ndezVictor/HernandezVictor]]
+  - Código :: [[./Hern-ndezVictor/HernandezVictor.py]]
+  - Lenguaje :: Python
+  - Comentarios ::
+    - En tu documentación indicas que empleaste un torniquete, pero no
+      veo nada que parezca uno en el código.
+
+    - El código no funciona. Tiene desde errores básicos de sintaxis
+      de Python:
+
+      - Falta de indentación (línea 93)
+
+      - Uso de =:= final donde no corresponde (también línea 93)
+
+    - Errores lógicos
+
+      - Requieres del paso de una variable =e= para iniciar tus hilos
+        =s= y =h= en el =while True:= de la línea 96.
+
+      - La variable =boat= que usas para señalizar en =serf()= y en
+        =hacker()= nunca se nicializa
+
+      - Incluso la forma en que está construido el =while= de la línea
+        96 es un error lógico: Si se lo permites, va a lanzar un
+        número /bestial/ de hilos hasta saturar tu sistema.
+
+    - Reconozco la resolución de la referencia que les di...
+
+    - Sin embargo, se ve que intentaste comprenderlo y adecuarlo. Eso
+      vale por una entrega :-] Te sugiero, como sea, aplicarte un poco
+      para comprender mejor el tema.
+
+  - Calificación :: 6
+
+- Erick Paniagua y Eduardo Stevens ::
+  - Problema elegido :: El servidor Web
+  - Documentación :: [[./PaniaguaErick-StevensEduardo/Información.txt]]
+  - Código :: [[./PaniaguaErick-StevensEduardo/Códigotarea2.txt]]
+  - Lenguaje :: Python
+  - Comentarios ::
+    - Entrega extemporánea (sobre 80%)
+    - La función =jefe()= implementa básicamente una barrera (aunque
+      con un poco de lógica invertida — En su condicional están
+      verificando que el contador sea /distinto/ del número deseado de
+      hilos, cuando a esa condición debe entrarse cuando sea /igual/.
+    - A nivel conceptual: Debe haber /un/ jefe y /muchos/
+      trabjadores. Asumiendo que el hilo principal fuera el jefe, yo
+      sugeriría renombrar la función =jefe()= por =trabajador()=, y
+      para las dos líneas finales:
+      #+BEGIN_SRC python
+	# Recuerden, el jefe se mantiene vivo, no se limita a que existan diez
+	# hijos...
+	while True:
+	  # (...Alguna "magia" para que pase la cantidad de hilos necesarios
+	  # pero no más...)
+	  Thread(target=trabajador, args=[conexion, mutex]).start()
+      #+END_SRC
+    - Definen la función =Conexion_red()=, pero no la llaman nunca...
+    - No llegan a delinear una estrategia que funcione, me cuesta
+      encontrar desde dónde corregir para mejorar su código ☹
+  - Calificación :: 6 × 0.4 = 5.6
+
+- Andrew Sánchez ::
+  - Problema elegido :: Gatos y ratones
+  - Documentación :: [[./SánchezAndrew/gatos_ratones.py]]
+  - Código :: [[./SánchezAndrew/ReporteTareaDos]]
+  - Lenguaje :: Python
+  - Comentarios ::
+    - Me parece que comprendiste mal parte de los puntos que buscaba
+      el artículo: Los gatos y ratones tendrían que crear (en este
+      contexto, significaría programar sus sincronizaciones con tal
+      fin) un /acuerdo de caballeros/ para que estuviera previsto que
+      el gato se comiera al ratón cada vez que coincidan — /pero que
+      no coincidieran/ (ya sea nunca-nunca o que fuera muy poco
+      probable).
+
+      - Siguiendo tu lógica, un gato siempre se comerá a un ratón
+        (adquiere sí-o-sí a =senalComeRaton=)
+
+      - La manera más natural que se me ocurre de resolverlo es
+        utilizando una exclusión mutua (apagador)
+
+    - Me gusta tu código, simple de comprender y de seguir — /Y
+      claramente realizado por ti/. Eso vale bastante :-)
+
+    - Con gusto platicamos acerca de cualquier duda o inquietud que
+      tengas respecto a la programación de este tipo. Es parte de mis
+      prioridades personales para este curso que ustedes salgan más
+      programadores y mejores programadores que cuando entraron ☺
+
+      No tengo una recomendación clara de bibliografía
+      práctica... Sólo... Hacerlo una y otra vez. Pero podemos revisar
+      juntos el problema que quieras. Y tengo bastante bibliografía,
+      pero más bien teórica, si te interesa.
+  - Calificación :: 9
+
+- Eduardo Valdez ::
+  - Problema elegido :: El cruce del río
+  - Documentación :: [[./ValdezEduardo/Documentación_Tarea2.pdf]]
+  - Código :: [[./ValdezEduardo/Tarea2.py]]
+  - Lenguaje :: Python
+  - Comentarios ::
+    - Entrega extemporánea (sobre 80%)
+    - No resuelve el problema planteado ☹
+      - Permite la creación de balsas demasiado ligeras que se volcarían
+	#+BEGIN_SRC text
+	  ¿Cuántos Serfs(Microsoft) abordarán la balsa?: 1
+	  ¿Cuántos Hackers(GNU-Linux) abordarán la balsa?: 2
+
+	  Ok, balanceo de desarrolladores justo :)
+	  Enviando balsa...
+
+	  Bienvenidos:  
+	  [['Hacker_Numero.0', 'Hacker_Numero.1'], ['Serf_Numero.0'], ['Hacker_Numero.0', 'Hacker_Numero.1'], ['Serf_Numero.0']]
+	#+END_SRC
+      - Permite que haya balsas demasiado llenas, arriesgando que se
+        hundan por sobrepeso:
+	#+BEGIN_SRC text
+	  ¿Cuántos Serfs(Microsoft) abordarán la balsa?: 11
+	  ¿Cuántos Hackers(GNU-Linux) abordarán la balsa?: 1
+
+	  Ok, balanceo de desarrolladores justo :)
+	  Enviando balsa...
+
+	  Bienvenidos:  
+	  [['Hacker_Numero.0'], ['Serf_Numero.0', 'Serf_Numero.1', 'Serf_Numero.2', 'Serf_Numero.3', 'Serf_Numero.4', 'Serf_Numero.5', 'Serf_Numero.6', 'Serf_Numero.7', 'Serf_Numero.8', 'Serf_Numero.9', 'Serf_Numero.10'], ['Hacker_Numero.0'], ['Serf_Numero.0', 'Serf_Numero.1', 'Serf_Numero.2', 'Serf_Numero.3', 'Serf_Numero.4', 'Serf_Numero.5', 'Serf_Numero.6', 'Serf_Numero.7', 'Serf_Numero.8', 'Serf_Numero.9', 'Serf_Numero.10']]
+	#+END_SRC
+      - Si cada arreglo interno es una balsa resultante, nunca permite
+        mezclas de 2+2. (O... ¿Cómo debo leer la salida?)
+    - Con más de cuatro pasajeros, el programa siempre se congela y
+      debe ser terminado por la fuerza.
+    - Cada invocación a =autorizar_balsa()= decrementa a
+      =semaforo_hacker= y a =semaforo_serf= (dependiendo de la
+      capacidad de la balsa, no de la identidad del que llegó). No
+      termino de comprender la lógica que intenta seguir esta
+      función.
+
+  - Calificación :: 6 × 0.8 = 5.6

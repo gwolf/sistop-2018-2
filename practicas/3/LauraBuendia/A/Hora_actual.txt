@@ -1,2 +1,0 @@
-La fecha actual es: 16/03/2018 
-Escriba la nueva fecha: (dd-mm-aa) 

@@ -1,0 +1,55 @@
+#+title: Evaluación de exposición: ¿Alguien dijo keylogger?
+#+author: Gunnar Wolf
+
+- Tema presentado por :: Luis Ernesto Ochoa, José Alonso Palomeque
+- Calificación global :: (7.25 × 0.3) + (8.25 × 0.7) = *7.95*
+
+* Evaluación grupal
+|--------------+------------+----------+-----------+-------|
+| Originalidad | Relevancia | Claridad | Presencia | Total |
+|--------------+------------+----------+-----------+-------|
+|          7.5 |         10 |      7.5 |       7.5 |  8.13 |
+|           10 |         10 |      7.5 |       7.5 |  8.75 |
+|          7.5 |         10 |      7.5 |         5 |  7.50 |
+|           10 |         10 |      7.5 |       7.5 |  8.75 |
+|           10 |        7.5 |      7.5 |         5 |  7.50 |
+|           10 |        7.5 |        5 |         5 |  6.88 |
+|          7.5 |        7.5 |        5 |         5 |  6.25 |
+|            5 |          5 |        5 |         5 |     5 |
+|           10 |        7.5 |      7.5 |         5 |  7.50 |
+|          7.5 |        7.5 |        5 |         5 |  6.25 |
+|          7.5 |        7.5 |        5 |         5 |  6.25 |
+|          7.5 |        7.5 |        5 |       7.5 |  6.88 |
+|           10 |        7.5 |      7.5 |         5 |  7.50 |
+|          7.5 |         10 |        5 |         0 |  5.63 |
+|           10 |        7.5 |       10 |         5 |  8.13 |
+|           10 |        7.5 |       10 |        10 |  9.38 |
+|           10 |        7.5 |      7.5 |       7.5 |  8.13 |
+|          7.5 |        7.5 |      7.5 |       7.5 |  7.50 |
+|          7.5 |          5 |      7.5 |       7.5 |  6.88 |
+|            5 |          5 |      7.5 |       7.5 |  6.25 |
+|--------------+------------+----------+-----------+-------|
+|         8.38 |       7.75 |     6.88 |      6.00 |  7.25 |
+#+TBLFM: @>$1..@>$4=vmean(@II..@III-1); f-2::@2$>..@>$>=vmean($1..$4); f-2
+* Evaluación del docente
+
+- Originalidad del tema :: Excelente (10)
+- Material desarrollado :: Excelente (10)
+- Contenido :: Bueno (7.5)
+- Fuentes bibliográficas :: Excelente (10)
+- Uso del tiempo :: Suficiente (5)
+
+		    ¡Se pasó de media hora!
+- Dominio del tema :: Bueno (7.5)
+
+     El dominio por parte de Luis fue excelente, pero el de Palomeque
+     fue insuficiente.
+- Presencia :: Bueno (7.5)
+
+	       Lo mismo: Luis se ve que disfrutó preparando el
+               material y que estudió a fondo el libro; Palomeque
+               dependía de sus notas para todo, e incluso mencionó que
+               había partes de la presentación (incluso en su sección
+               menos técnica) que no conocía.
+- Global :: 10×0.1 + 10×0.2 + 7.5×0.2 + 10×0.1 + 5×0.1 + 7.5×0.15 +
+            7.5×0.15 = *8.25*
