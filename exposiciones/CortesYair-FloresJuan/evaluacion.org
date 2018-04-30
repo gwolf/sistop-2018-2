@@ -1,0 +1,39 @@
+#+title: Evaluación de exposición: Malware de script
+#+author: Gunnar Wolf
+
+- Tema presentado por :: Yair Cortés, Juan Flores
+- Calificación global :: (7.88 × 0.3) + (8.125 × 0.7) = *8.05*
+
+* Evaluación grupal
+|--------------+------------+----------+-----------+-------|
+| Originalidad | Relevancia | Claridad | Presencia | Total |
+|--------------+------------+----------+-----------+-------|
+|           10 |         10 |       10 |        10 |    10 |
+|          7.5 |        7.5 |       10 |       7.5 |  8.13 |
+|          7.5 |        7.5 |      7.5 |       7.5 |  7.50 |
+|          7.5 |        7.5 |      7.5 |       7.5 |  7.50 |
+|          7.5 |          5 |      7.5 |         5 |  6.25 |
+|          7.5 |        7.5 |      7.5 |        10 |  8.13 |
+|          7.5 |          5 |      7.5 |         5 |  6.25 |
+|            5 |         10 |       10 |         5 |  7.50 |
+|          7.5 |        7.5 |        5 |       7.5 |  6.88 |
+|          7.5 |          5 |       10 |       7.5 |  7.50 |
+|           10 |        7.5 |      7.5 |       7.5 |  8.13 |
+|           10 |        7.5 |       10 |        10 |  9.38 |
+|          7.5 |         10 |       10 |        10 |  9.38 |
+|           10 |        7.5 |      7.5 |       7.5 |  8.13 |
+|          7.5 |        7.5 |       10 |         5 |  7.50 |
+|--------------+------------+----------+-----------+-------|
+|         8.00 |       7.50 |     8.50 |      7.50 |  7.88 |
+#+TBLFM: @>$1..@>$4=vmean(@II..@III-1); f-2::@2$>..@>$>=vmean($1..$4); f-2
+* Evaluación del docente
+
+- Originalidad del tema :: Excelente (10)
+- Material desarrollado :: Suficiente (5)
+- Contenido :: Bueno (7.5)
+- Fuentes bibliográficas :: Excelente (10)
+- Uso del tiempo :: Excelente (10)
+- Dominio del tema :: Bueno (7.5)
+- Presencia :: Excelente (10)
+- Global :: 10×0.1 + 10×0.2 + 10×0.2 + 10×0.1 + 10×0.1 + 7.5×0.15 +
+            7.5×0.15 = *8.125*
