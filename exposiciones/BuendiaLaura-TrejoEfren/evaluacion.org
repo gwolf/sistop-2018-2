@@ -1,7 +1,7 @@
 #+title: Evaluación de exposición: Rootkits
 #+author: Gunnar Wolf
 
-- Tema presentado por :: Yair Cortés, Juan Flores
+- Tema presentado por :: Laura Buendía, Efrén Trejo
 - Calificación global :: (6.99 × 0.3) + (6.625 × 0.7) = *6.73*
 
 * Evaluación grupal
