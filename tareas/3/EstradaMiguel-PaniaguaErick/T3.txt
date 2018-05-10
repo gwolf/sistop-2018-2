@@ -1,0 +1,12 @@
+El programa recibe entrada del operador en lugar de generarla aleatoriamente.
+Las letras de los procesos pueden ser ingresadas tanto en mayusculas como en minúsculas, si se desea asignar un espacio de memoria libre solo se debe presionar la tecla <<barra espaciadora>> en el momento que el programa pida la asignación de un proceso a una localidad de memoria.
+La intención era resolver el problema por el método de <<peor ajuste>> implementando previamente una compactación inmediata sin necesidad de que el sistema operativo pidiera al operador hacerla. Esto a nuestro parecer podría mejorar la eficiencia de la asignación de memoria ya que siempre se tendría un espacio disponible con un tamaño “considerable”; en cualquier caso el programa también esta diseñado para evitar que existan espacios unitarios de memoria y para que un proceso no pueda ocupar mas de 15 unidades de memoria.
+
+Al no poder realizar la compactación, se acordó que el usuario pudiese liberar uno a uno cualquier proceso que desee.
+Ejemplo:
+Si un proceso ocupa 3 espacios de memoria, podrá liberar la memoria uno a uno hasta que llegue a 0. Y no liberar por completo el proceso el proceso entero de 3 espacios.
+
+No es algo muy divertido ya que el operador tendrá que hacerlo uno a uno.
+La asignación de memoria es mucho menos divertida ya que asignara un proceso a todas y cada una de las localidades de memoria vacías, habrá mucho desorden pero se puede arreglar siempre y cuando el operador quiera hacerlo.
+
+Estrada Silva Miguel-Paniagua Trejo Erick
