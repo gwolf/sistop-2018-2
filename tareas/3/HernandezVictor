@@ -1,0 +1,4 @@
+Lenguaje: C
+En el menú se presenta con dos opciones 0 asignar y 1 liberar, cualquier otro numero te saca del programa.
+
+No realiza el proceso de compactacion
