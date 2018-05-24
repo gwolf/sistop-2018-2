@@ -1,0 +1,195 @@
+#+title: Tarea 3 • Calificaciones
+#+author: Gunnar Wolf
+
+- Yair Cortés y Juan Flores ::
+  - Código :: [[./CortesYair-FloresJuan/tarea3.py][tarea3.py]]
+  - Documentación :: [[./CortesYair-FloresJuan/tarea3.md][tarea3.md]]
+  - Lenguaje :: Python
+  - Comentarios ::
+    - Respecto la documentación: ¡Ugh! ¡No digan /librería/ donde
+      quieren decir /biblioteca/! En serio, es un error muy feo ☹
+    - La ejecución es buena, y va agregando los procesos
+      correctamente. Detecta correctamente cuando hay que
+      compactar. Sin embargo, ¡no compacta!
+
+      #+BEGIN_SRC text
+	================= MAPA DE MEMORIA =================
+	|*| |*| |*| |*| |*| |B| |B| |B| |B| |B|
+	|B| |B| |C| |C| |C| |C| |C| |C| |C| |C|
+	|C| |E| |E| |E| |E| |E| |E|
+
+	1 => Agregar proceso
+	2 => Quitar proceso
+	0 => salir
+	$$ 1
+	ingresa el nombre del proceso: F
+	ingresa el tamaño de tu proceso: 6
+	se requiere compactación de memoria
+
+	================= MAPA DE MEMORIA =================
+	|F| |F| |F| |F| |F| |B| |B| |B| |B| |B|
+	|B| |B| |C| |C| |C| |C| |C| |C| |C| |C|
+	|C| |E| |E| |E| |E| |E| |E| |F|
+      #+END_SRC
+      En este caso, agregar un proceso de tamaño 6 debería haber
+      compactado lo suficiente para terminar con seis celdas
+      contiguas.
+      - Esto es porque en =compactacion()= hacen un filtrado,
+        =exite_espacio = '*' in memoria=... Pero no verifican que el
+        espacio exista de forma consecutiva
+    - El programa está claro, bien comentado y fácil de seguir. En lo
+      relativo al estilo, yo sólo sugeriría no repetirse tanto: Las
+      nueve líneas que imprimen el mapa de memoria se repiten tres
+      veces. Resulta más sencillo el mantenimiento si estos tres casos
+      los separan en una función =imprime_mapa()= o algo por el
+      estilo.
+    - No respondeiron a una pregunta expresa: ¿Implementan /peor
+      ajuste/, /mejor ajuste/ o /primer ajuste/? (primer ajuste, diría
+      yo)
+  - Calificación :: 9
+
+- Víctor Hernández ::
+  - Código :: [[./HernandezVictor/HernandezGutierrezVictorHugo.cpp][HernandezGutierrezVictorHugo.cpp]]
+  - Documentación :: [[./HernandezVictor/HernandezVictor][HernandezVictor]]
+  - Lenguaje :: C++
+  - Comentarios :: 
+    - Entrega extemporánea (×0.8)
+    - Conciso... ¡Pero /difícil de leer!/
+      - Toda la lógica en =main()= dificulta entender la secuencia
+        lógica como un conjunto de pasos "grandes"
+      - Nombre de variables demasiado poco descriptivo
+      - Incluso la interfaz usuario me dejó un buen rato rascándome la
+        cabeza
+	- No entendía que ante =Nuevo proceso (A):= tenía que
+          responder con un número. Si respondes con una letra, causas
+          un resultado creo que muy distinto de lo que esperas...
+      - Va asignando bien, liberando bien... Pero no vuelve a utilizar
+        los espacios liberados — Es más, asignas al /pedazo de
+        programa/ que te cupo. ¡Y habría cabido completo en el espacio
+        que había!
+	#+BEGIN_SRC text
+	  Asignar(0) o Liberar(1)): 0
+	  Nuevo proceso (A):
+	  5
+	  Nueva Asignacion:
+	  AAAAA-------------------------
+	  Asignar(0) o Liberar(1)): 0
+	  Nuevo proceso (B):3
+	  Nueva Asignacion:
+	  AAAAABBB----------------------
+	  Asignar(0) o Liberar(1)): 0
+	  Nuevo proceso (C):10
+	  Nueva Asignacion:
+	  AAAAABBBCCCCCCCCCC------------
+	  Asignar(0) o Liberar(1)): 0
+	  Nuevo proceso (D):8
+	  Nueva Asignacion:
+	  AAAAABBBCCCCCCCCCCDDDDDDDD----
+	  Asignar(0) o Liberar(1)): 1
+	  Proceso a liberar (ABCD): B
+	  AAAAA---CCCCCCCCCCDDDDDDDD----
+	  Asignar(0) o Liberar(1)): 0
+	  Nuevo proceso (E):3
+	  Nueva Asignacion:
+	  AAAAA---CCCCCCCCCCDDDDDDDDEEE-
+	  Asignar(0) o Liberar(1)): 0
+	  Nuevo proceso (F):3
+	  Nueva Asignacion:
+	  AAAAA---CCCCCCCCCCDDDDDDDDEEEF
+	  Asignar(0) o Liberar(1)): 
+	#+END_SRC
+      - ¿Sigue avanzando sobre la memoria fuera de su buffer? ¿Qué
+        pasa aquí?
+	#+BEGIN_SRC text
+	  AAAAA---CCCCCCCCCCDDDDDDDDEEEF
+	  Asignar(0) o Liberar(1)): 0
+	  Nuevo proceso (G):5
+	  Nueva Asignacion:
+	  AAAAA---CCCCCCCCCCDDDDDDDDEEEF
+	  Asignar(0) o Liberar(1)): 
+	#+END_SRC
+	(Debería haber mencionado alguna advertencia..?
+  - Calificación :: 7.5 × 0.8 = 6
+
+- Alejandro Ramírez y Rubén Lozano ::
+  - Código :: [[.//RamirezAlejandro-LozanoRuben/tarea3/AsignacionMemoria.java][AsignacionMemoria.java]], [[.//RamirezAlejandro-LozanoRuben/tarea3/CeldaMemoria.java][CeldaMemoria.java]]
+  - Documentación :: 
+  - Lenguaje :: Java
+  - Comentarios :: 
+    - Entrega extemporánea (×0.8)
+    - Mi conocimiento de Java es muy bajo (¿o será que le tengo
+      manía?) Y eso me dificulta hacer un comentario suficiente /
+      informado
+    - Recomendación de estilo / rendimiento: Si bien en un programa
+      tan sencillo como este no hace mayor diferencia, les sugiero
+      cambiar usos como el siguiente (línea 158; edito un poquito para
+      optimizar espacio):
+      #+BEGIN_SRC java
+	public static String leerComando() {
+	    String entradaTeclado = "";
+	    do {
+		do {
+		    System.out.print("ingrese un comando para utilizar(0:asignar,1:liberar,2:ayuda,3:salir): ");
+		    Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+		    entradaTeclado = entradaEscaner.next (); //Invocamos un método sobre un objeto Scanner
+		} while ((entradaTeclado.length()>1) || (entradaTeclado.compareTo("2")==0));
+      #+END_SRC
+      Dado que van a utilizar repetidamente al =Scanner= que
+      construyeron, ¿por qué no construirlo únicamente una vez? La
+      inicialización de un objeto que interactúa con el mundo exterior
+      muchas veces toma algo de tiempo. Mi primer recomendación era
+      simplista — Únicamente mover la creación del objeto hacia afuera
+      del ciclo.
+      #+BEGIN_SRC java
+	public static String leerComando() {
+	    String entradaTeclado = "";
+	    Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+	    do {
+		do {
+		    System.out.print("ingrese un comando para utilizar(0:asignar,1:liberar,2:ayuda,3:salir): ");
+		    entradaTeclado = entradaEscaner.next (); //Invocamos un método sobre un objeto Scanner
+		} while ((entradaTeclado.length()>1) || (entradaTeclado.compareTo("2")==0));
+      #+END_SRC
+      Sin embargo, en otro punto del programa usan también un
+      =Scanner=, y su creación fallaría. Podrían crear al =Scanner=
+      dentro del constructor de =AsignacionMemoria= y así estaría
+      siempre disponible.
+    - ¡Piensen en el usuario! No les exigí documentación, pero sí pasé
+      un buen rato rascándome la cabeza:
+      #+BEGIN_SRC text
+      $ java AsignacionMemoria
+      Error: Could not find or load main class AsignacionMemoria
+      Caused by: java.lang.NoClassDefFoundError: tarea3/AsignacionMemoria (wrong name: AsignacionMemoria)
+      #+END_SRC
+      Hasta comprender que debía llamarlo desde un directorio más
+      afuera, incluyendo el nombre de directorio
+      (=tarea3/AsignacionMemoria=).
+    - Dejando de lado los detalles estéticos y menores, ¡muy buena
+      implementación!
+
+  - Calificación :: 10 × 0.8 = 8
+
+- Miguel Estrada y Erick Paniagua ::
+  - Código :: [[./EstradaMiguel-PaniaguaErick/lo.c][lo.c]]
+  - Documentación :: [[./EstradaMiguel-PaniaguaErick/T3.txt][T3.txt]]
+  - Lenguaje :: C
+  - Comentarios ::
+    - Entrega muy extemporánea (no alcanza calificación ☹)
+    - ¡Ojo con la indentación! Veo que en varios casos no alinearon
+      porciones de código o comentarios respecto a su nivel de
+      indentación (p.ej. líneas 13-15, 20, y otras), o varias llaves
+      que se cierran al mismo nivel (103-105). Eso dificulta la
+      lectura.
+      - La dificulta /mucho/. Puede sonarles a payasada, pero después
+        de un par de vueltas, me hizo desistir de entender el
+        sentido...
+    - El programa no ejecuta correctamente:
+      - Salta algunas lecturas, no se pueden llenar varios de los
+        campos que pide
+      - Invariablemente se va a =Segmentation fault= después
+        de cuatro lecturas
+      - ¿Se deberá a que el tamaño del buffer que recibe del =scanf()=
+        es muy chico? =tam=1= (línea 6), pero toda cadena debe
+        terminar en =\0=...
+  - Calificación :: 0
+
