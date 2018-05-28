@@ -41,6 +41,16 @@ GoogleFS (de Google, naturalmente) y Windows Distributed File System
 está construido sobre `FUSE`. Pero hay muchos, muchísimos más que
 pueden abordar.
 
+## Referencias
+
+En clase les mencioné dos artículos que se publicaron hoy en 
+[LWN.net](https://lwn.net/) relacionados con este tema: Esta semana se
+celebra el 2018 Linux Storage, Filesystem, and Memory-Management Summit
+(LSFMM). De la cobertura que les hace LWN,
+
+- [Network filesystem topics](https://lwn.net/SubscriberLink/754506/f312df34b988f603/)
+- [SMB/CIFS compounding support](https://lwn.net/SubscriberLink/754507/98c73dcca48f0d0c/)
+
 ## Entrega
 
 La entrega puede hacerse de forma individual o en equipos de dos
