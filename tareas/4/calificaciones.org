@@ -1,0 +1,81 @@
+#+title: Tarea 4 • Calificaciones
+#+author: Gunnar Wolf
+
+Al igual que en la [[../1/README.md][tarea 1]], si bien esta es una tarea un tanto más
+abierta en su planteamiento, se trata también en buena medida de un
+/control de lectura/, por lo que la calificación tenderá a no tener
+muchas explicaciones.
+
+- Oscar Berdejo ::
+  - Archivo :: [[./BerdejoOscar/Tarea4.pdf][tarea4.pdf]]
+  - Sistema de archivos abordado :: Google File System
+  - Comentarios ::
+    - ¡Ponle atención a la legibilidad de tu texto! Tienes varios
+      dedazos, varias ideas separadas incompletamente (p.ej. con un
+      punto seguido de minúscula), pedazos de redacción un poco
+      ambigua, frases demasiado largas sin respiro... Ninguno de estos
+      son /nefastos/ por sí sólos, pero en conjunto dificultan la
+      comprensión de las ideas principales.
+  - Calificación :: 10
+- Laura Buendía y Efrén Trejo ::
+  - Archivo :: [[./BuendiaLaura-TrejoEfren/Sistemas_de_Archivo.docx][Sistemas de Archivo.docx]]
+  - Sistema de archivos abordado :: GVFS (/Git Virtual File System/)
+  - Comentarios ::
+    - Abordan un caso interesante y distinto de los que yo
+      propuse. ¡Bien!
+    - GVFS convierte a Git en un sistema de archivos *casi* remoto —
+      No llega a ser remoto (porque una vez que están trabajando con
+      determinado archivo, éste "vive" localmente en sus computadoras,
+      y debe ser gestionado mediante los comandos habituales de Git
+    - GVFS es un excelente ejemplo de lo que podría implementarse (en
+      Linux) sobre [[https://libfuse.github.io/doxygen/][FUSE]]. Pero, claro, no tenían manera de saber eso ☺
+      Y esta es una implementación de origen para Windows.
+    - También es comparable con otro proyecto de lo más interesante,
+      [[https://git-annex.branchable.com/][Git Annex]], de Joey Hess.
+  - Calificación :: 10
+- Yair Cortés y Juan Flores ::
+  - Archivo :: [[./CortesYair-FloresJuan/Tarea_4.pdf][Tarea 4.pdf]]
+  - Sistema de archivos abordado :: CEPH
+  - Comentarios ::
+  - Calificación :: 10
+- Alejandro Espejel ::
+  - Archivo :: [[./EspejelAlejandro/Tarea4.pdf][Tarea4.pdf]]
+  - Sistema de archivos abordado :: Amazon S3
+  - Comentarios ::
+    - Mi pregunta puede haber resultado un poco capciosa — Todos los
+      sistemas de archivos distribuidos son remotos
+      - Pero dado que S3 reparte la información automáticamente sobre
+        un conjunto de servidores, y maneja temas de replicación y
+        tolerancia a fallos, es necesariamente un sistema /distribuido/.
+    - La interfaz con S3 es, como mencionas, de /servicios Web/. Esto
+      no significa que su uso sea mediante un navegador: El sistema de
+      archivos se /monta/ como montarías un USB u otros similares. Hay
+      clientes para los distintos sistemas operativos.
+  - Calificación :: 10 × 0.8 (extemporánea) = 8
+- Rubén Lozano y Alejandro Ramírez ::
+  - Archivo :: [[./LozanoRuben-RamirezAlejandro/tarea4.pdf][tarea4.pdf]]
+  - Sistema de archivos abordado :: Google File System
+  - Comentarios ::
+  - Calificación :: 10
+- Luis Ernesto Ochoa ::
+  - Archivo :: [[./OchoaLuis/TAREA_4.pdf][TAREA 4.pdf]]
+  - Sistema de archivos abordado :: GlusterFS
+  - Comentarios ::
+    - Buen resumen
+    - ¡Interesante! No sabía yo que tenía este "complemento" de
+      compatibilidad con Samba/CIFS.
+  - Calificación :: 10
+- Eduardo Valdez ::
+  - Archivo :: [[./ValdezEduardo/Tarea_4.pdf][Tarea 4.pdf]]
+  - Sistema de archivos abordado :: GoogleFS
+  - Comentarios ::
+    - ¡Ojo con la descripción! Indicas correctamente, este es un
+      /sistema de archivos distribuido/, pero indicas que es
+      distribuido porque permite (...) /procesar archivos guardados en
+      un servidor como si fuese local/ — ¡Eso significa que es
+      /remoto/!
+      - Lo que lo hace /distribuido/ es que los datos no radican en
+        /un/ servidor, sino que en /un conjunto/ de servidores,
+        intercomunicados de forma transparente, repartiendo los
+        archivos y la carga transparentemente.
+  - Calificación :: 10

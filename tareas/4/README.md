@@ -56,3 +56,7 @@ celebra el 2018 Linux Storage, Filesystem, and Memory-Management Summit
 La entrega puede hacerse de forma individual o en equipos de dos
 personas. Utilicen la ya habitual nomenclatura y ubicación estándar
 para todas sus entregas mediante Git.
+
+## Calificaciones y comentarios
+
+[Disponibles en el archivo calificaciones.org](./calificaciones.org)
