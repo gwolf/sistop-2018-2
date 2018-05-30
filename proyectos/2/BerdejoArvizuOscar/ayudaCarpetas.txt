@@ -1,0 +1,3 @@
+*****************Informacion sobre las operaciones con carpetas******************************
+--Para navergar entre carpetas se necesita el siguiente formato /raiz/carpeta/subcarpeta....
+--El comando eliminar carpetas, elimina las carpetas sin importar si tienen o no contenido dentro de esta
