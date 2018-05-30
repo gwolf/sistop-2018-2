@@ -1,0 +1,183 @@
+#+title: Calificaciones y comentarios al segundo proyecto parcial
+
+El planteamiento del proyecto y la rúbrica para su calificación están
+[[./README.md][disponibles aquí]].
+
+* Calificaciones y comentarios
+
+** Oscar Berdejo y Oscar Negrete
+- Documentación :: [[./BerdejoArvizuOscar/DocSistArch.pdf][DocSistArch.pdf]]
+- Código :: [[./BerdejoArvizuOscar/sistArch.py][sistArch.py]]
+- Lenguaje de desarrollo :: Python
+- Interfaz :: Menúes presentando operaciones sobre archivos
+              independientes
+- Estrategia :: No implementa un micro-sistema-de-archivos, sino que
+                es un micro-navegador de archivos estándar del
+                sistema.
+- Observaciones ::
+  - El directorio de entrega está únicamente a nombre de /Oscar
+    Berdejo/. La documentación menciona a /Oscar Navarrete/. Ya con el
+    número de cuenta, puedo confirmar que se refiere a /Oscar
+    Negrete/... No me meto en quién hizo qué parte del trabajo en el
+    equipo, pero... ¡Sean más cuidadosos! ¡Deja una terrible
+    impresión!
+  - En la documentación, se nota claramente que utilizaron un
+    corrector ortográfico automático. ¡No se confíen de esas
+    herrmientas!
+    - No es lo mismo «práctica» y «practica», ni «realizó» y
+      «realizo», «tenia» (gusano parásito intestinal) y
+      «tenía»... ¡Espero que no tengan instalada ninguna tenia!
+    - Hay errores de concordancia entre femeninos y masculinos.
+    - En el código tienen también errores de ortografía y de
+      concordancia entre singular y plural...
+  - El programa que ustedes realizaron es una interfaz para manipular
+    los archivos en el sistema de archivos real. No es lo que
+    solicité, tengo que dar "insuficiente" en cumplimiento.
+  - Respecto a la historia en Git: La razón de esta solicitud es que
+    vayan mostrando el proceso de desarrollo del proyecto. Le /sacaron
+    la vuelta/ exitosamente haciendo un commit por archivo... ¡Pero
+    les sugiero fuertemente que aprendan a aprovechar la herramienta!
+
+| *Rubro*                | *Parcial* | *Peso* | *Puntos* |
+|------------------------+-----------+--------+----------|
+| *Requisitos*           |           |    0.2 |     0.00 |
+| Cumplimiento           |         0 |        |     0.00 |
+|------------------------+-----------+--------+----------|
+| *Proyecto*             |           |    0.2 |     1.50 |
+| Complejidad            |         5 |        |     0.33 |
+| Claridad de desarrollo |        10 |        |     0.67 |
+| Interfaz usuario       |       7.5 |        |     0.50 |
+|------------------------+-----------+--------+----------|
+| *Documentación*        |           |    0.2 |     1.50 |
+| Doc. externa           |       7.5 |        |     0.50 |
+| Entorno y dependencias |        10 |        |     0.67 |
+| Comentarios            |         5 |        |     0.33 |
+|------------------------+-----------+--------+----------|
+| *Entrega*              |           |    0.2 |     1.84 |
+| Historia en Git        |       7.5 |        |     0.50 |
+| Directorio de proyecto |        10 |        |     0.67 |
+| Código válido          |        10 |        |     0.67 |
+|------------------------+-----------+--------+----------|
+| *Legibilidad*          |           |    0.2 |     1.67 |
+| Estructura             |        10 |        |     1.00 |
+| Nomenclatura           |        10 |        |     0.67 |
+|------------------------+-----------+--------+----------|
+| *TOTAL*                |           |        |     6.51 |
+|------------------------+-----------+--------+----------|
+#+TBLFM: @2$4=@3 ; f-2::@3$4=@3$2*@2$3 ; f-2::@4$4=@5+@6+@7 ; f-2::@5$4=$2*@4$3/3 ; f-2::@6$4=$2*@4$3/3 ; f-2::@7$4=$2*@4$3/3 ; f-2::@8$4=@9+@10+@11 ; f-2::@9$4=$2*@8$3/3 ; f-2::@10$4=$2*@8$3/3 ; f-2::@11$4=$2*@8$3/3 ; f-2::@12$4=@13+@14+@15 ; f-2::@13$4=$2*@12$3/3 ; f-2::@14$4=$2*@12$3/3 ; f-2::@15$4=$2*@12$3/3 ; f-2::@16$4=@17+@18 ; f-2::@17$4=$2*@16$3/2 ; f-2::@18$4=$2*@16$3/3 ; f-2::@19$4=@2+@4+@8+@12+@16 ; f-2
+
+** 
+** Yair Cortés y Juan Flores
+- Documentación :: [[./CortesYair-FloresJuan/Documentacion_proyecto2.pdf][Documentacion_proyecto2.pdf]]
+- Código :: [[./CortesYair-FloresJuan/micro_sistema_archivos.py][micro_sistema_archivos.py]]
+- Lenguaje de desarrollo :: Python
+- Interfaz :: Menú (comandos delimitados)
+- Estrategia :: El programa crea un archivo oculto =.disco.dat= en el
+                directorio actual. Es un archivo de texto, segmenta
+                con identificadores predefinidos la tabla de
+                directorio y el espacio de datos, así como cada uno de
+                los archivos.
+- Observaciones ::
+  - ¡Buena implementación!
+  - Se me ocurre una simple forma de ataque que corrompería a la
+    información: ¿qué pasa si creo un archivo que contenga una de las
+    cadenas reservadas? (=##xx1=, =@&CONTENIDOF&@=, =#%TABLAI%#= o
+    algo por el estilo) Puedes desde confundir al sistema hasta lograr
+    corromper por completo su funcionamiento.
+    - Esto podrían evitarlo "escapando" las secuencias peligrosas,
+      pero requiere más complejidad de la que vale la pena para un
+      proyecto tan simple ☺
+
+
+| *Rubro*                | *Parcial* | *Peso* | *Puntos* |
+|------------------------+-----------+--------+----------|
+| *Requisitos*           |           |    0.2 |      1.5 |
+| Cumplimiento           |       7.5 |        |     1.50 |
+|------------------------+-----------+--------+----------|
+| *Proyecto*             |           |    0.2 |     1.84 |
+| Complejidad            |       7.5 |        |     0.50 |
+| Claridad de desarrollo |        10 |        |     0.67 |
+| Interfaz usuario       |        10 |        |     0.67 |
+|------------------------+-----------+--------+----------|
+| *Documentación*        |           |    0.2 |     2.01 |
+| Doc. externa           |        10 |        |     0.67 |
+| Entorno y dependencias |        10 |        |     0.67 |
+| Comentarios            |        10 |        |     0.67 |
+|------------------------+-----------+--------+----------|
+| *Entrega*              |           |    0.2 |     1.67 |
+| Historia en Git        |         5 |        |     0.33 |
+| Directorio de proyecto |        10 |        |     0.67 |
+| Código válido          |        10 |        |     0.67 |
+|------------------------+-----------+--------+----------|
+| *Legibilidad*          |           |    0.2 |     1.67 |
+| Estructura             |        10 |        |     1.00 |
+| Nomenclatura           |        10 |        |     0.67 |
+|------------------------+-----------+--------+----------|
+| *TOTAL*                |           |        |     8.69 |
+|------------------------+-----------+--------+----------|
+#+TBLFM: @2$4=@3::@3$4=@3$2*@2$3 ; f-2::@4$4=@5+@6+@7::@5$4=$2*@4$3/3 ; f-2::@6$4=$2*@4$3/3 ; f-2::@7$4=$2*@4$3/3 ; f-2::@8$4=@9+@10+@11::@9$4=$2*@8$3/3 ; f-2::@10$4=$2*@8$3/3 ; f-2::@11$4=$2*@8$3/3 ; f-2::@12$4=@13+@14+@15::@13$4=$2*@12$3/3 ; f-2::@14$4=$2*@12$3/3 ; f-2::@15$4=$2*@12$3/3 ; f-2::@16$4=@17+@18::@17$4=$2*@16$3/2 ; f-2::@18$4=$2*@16$3/3 ; f-2::@19$4=@2+@4+@8+@12+@16
+
+** Rubén Lozano y Alejandro Ramírez
+- Documentación :: No tiene
+- Código :: [[./LozanoRuben-RamirezAlejandro/Consola.java][Consola.java]], [[./LozanoRuben-RamirezAlejandro/Disco.java][Disco.java]], [[./LozanoRuben-RamirezAlejandro/Leer.java][Leer.java]], [[./LozanoRuben-RamirezAlejandro/Unidad.java][Unidad.java]],
+            [[./LozanoRuben-RamirezAlejandro/Usuario.java][Usuario.java]]
+- Lenguaje de desarrollo :: Java
+- Interfaz :: Presenta varias /unidades/ y varios /usuarios/. No me
+              parece que haya código enfocado a darle persistencia en
+              disco
+  - La clase =Usuario= cuenta con algunos métodos que leen / escriben
+    archivos, pero no son utilizadas desde ningún punto del programa.
+  - Puede eliminarse la clase =Usuario=, no tiene impacto en la
+    ejecución del programa
+- Estrategia :: Aparentemente, la clase =Unidad= sería utilizada con
+                sus métodos =agregarADir()= y =borrarDeDir()=, pero no
+                son utilizados.
+- Observaciones ::
+  - Si bien es cierto que en el transcurso del semestre les recalqué
+    que es mejor una entrega incompleta que no hacer una entrega (y lo
+    es — Este proyecto recibe calificación, lo cual es mucho más que
+    el 0 de uno no entregado), su estado está demasiado inmaduro como
+    para comprender siquiera la estrategia que perseguían utilizar.
+  - Entregaron cada archivo como un commit; eso no me permite
+    aprovechar a Git para comprender el proceso mental, el avance del
+    desarrollo (aunque, sí, cumple con la letra del criterio
+    presentado)
+  - Tuve que hacer un par de modificaciones en =Usuario.java= para
+    poder compilar — Hacían referencia a una variable =Nombre=, cuando
+    ésta se llama =nombre=, y faltaba de cerrar una llave (¡omisión
+    causada por no indentar de forma consistente!).
+  - Los archivos del proyecto declaran =package
+    proyecto2SisTop;=. Cuando entreguen así, deben crear el directorio
+    (si no, el pobre usuario final / evaluador tiene que rascarse la
+    cabeza para entender cómo intentar ejecutar...)
+
+    Logré que compile... Pero no logré que funcione más allá de un
+    primer menú.
+
+| *Rubro*                | *Parcial* | *Peso* | *Puntos* |
+|------------------------+-----------+--------+----------|
+| *Requisitos*           |           |    0.2 |       1. |
+| Cumplimiento           |         5 |        |     1.00 |
+|------------------------+-----------+--------+----------|
+| *Proyecto*             |           |    0.2 |     0.83 |
+| Complejidad            |       7.5 |        |     0.50 |
+| Claridad de desarrollo |         5 |        |     0.33 |
+| Interfaz usuario       |         0 |        |     0.00 |
+|------------------------+-----------+--------+----------|
+| *Documentación*        |           |    0.2 |     0.66 |
+| Doc. externa           |         0 |        |     0.00 |
+| Entorno y dependencias |         5 |        |     0.33 |
+| Comentarios            |         5 |        |     0.33 |
+|------------------------+-----------+--------+----------|
+| *Entrega*              |           |    0.2 |     1.17 |
+| Historia en Git        |       7.5 |        |     0.50 |
+| Directorio de proyecto |        10 |        |     0.67 |
+| Código válido          |         0 |        |     0.00 |
+|------------------------+-----------+--------+----------|
+| *Legibilidad*          |           |    0.2 |     0.75 |
+| Estructura             |       7.5 |        |     0.75 |
+| Nomenclatura           |         0 |        |     0.00 |
+|------------------------+-----------+--------+----------|
+| *TOTAL*                |           |        |     4.41 |
+|------------------------+-----------+--------+----------|
+#+TBLFM: @2$4=@3::@3$4=@3$2*@2$3 ; f-2::@4$4=@5+@6+@7::@5$4=$2*@4$3/3 ; f-2::@6$4=$2*@4$3/3 ; f-2::@7$4=$2*@4$3/3 ; f-2::@8$4=@9+@10+@11::@9$4=$2*@8$3/3 ; f-2::@10$4=$2*@8$3/3 ; f-2::@11$4=$2*@8$3/3 ; f-2::@12$4=@13+@14+@15::@13$4=$2*@12$3/3 ; f-2::@14$4=$2*@12$3/3 ; f-2::@15$4=$2*@12$3/3 ; f-2::@16$4=@17+@18::@17$4=$2*@16$3/2 ; f-2::@18$4=$2*@16$3/3 ; f-2::@19$4=@2+@4+@8+@12+@16

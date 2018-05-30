@@ -38,7 +38,11 @@ descomprima un `.zip` o similar, y lo vuelva a comprimir al terminar
 la ejecución. Las operaciones deben hacerse _directmente_ en el
 archivo contenedor.
 
-El proyecto se calificará según la siguiente rúbrica:
+# Calificaciones
+
+Puedes encontrar las calificaciones y comentarios [siguiendo esta liga](./calificaciones.org).
+
+El proyecto se califica según la siguiente rúbrica:
 
 <table>
 <tr><th></th><th><b>Excelente</b> (100%)</th><th><b>Bueno</b> (75%)</th><th><b>Suficiente</b> (50%)</th><th><b>Insuficiente</b> (0%)</th><th><b>Peso</b></th></tr>
