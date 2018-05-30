@@ -1,0 +1,23 @@
+*******************************************************************
+*                                                                 *
+*                               Autores:                          *
+*                          Berdejo Arvizu Oscar                   *
+*                        Negrete Rodriguez Oscar                  *
+*                                                                 *
+*                               Proyecto:                         *
+*                       Mini-Sistema de Archiovs                  *
+*                                                                 *
+*******************************************************************
+
+Este es una version de prueba sobre un sistema de archivos realizada 
+por dos estudiantes de la facultad de ingenieria. Para mas informacion
+revisar el .doc que se tiene e github.
+
+Este documento esta disponible solamente para personas que saben de programacion
+por eso mismo la interfaz, si asi puede llamarse, que este tiene es muy bruta
+y sencilla, algo que solamente alguna persona con conocimiento en computacion 
+podria entender.
+
+Se recomienda leer el documento y visitar el apartado de ayuda para poder entender
+bien el funcionamiento de este programa junto con sus limitaciones
+
