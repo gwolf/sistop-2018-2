@@ -1,0 +1,7 @@
+*************Informacion sobre las operaciones con archivos Archivos*****************************
+-- El sistema de archivos por defecto almacenara los archivos creados en '.txt', 
+   se podrian crear archivos en '.py' , '.cpp'  y otros lenguajes pero se imprime
+   la palabra salir
+-- Para mover un archivo hace falta conocer la ruta de este en el formato que se
+   obtiene con la opcion de "Ubicacion"
+
