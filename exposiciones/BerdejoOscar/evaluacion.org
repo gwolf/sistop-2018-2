@@ -1,0 +1,45 @@
+#+title: Evaluación de exposición: Logical Volume Manager (LVM)
+#+author: Gunnar Wolf
+
+- Tema presentado por :: Oscar Berdejo
+- Calificación global :: (7.47 × 0.3) + (6.75 × 0.7) = *6.96*
+
+* Evaluación grupal
+
+[[./evaluacion_alumnos.pdf][Evaluaciones individuales de los alumnos]]
+
+|--------------+------------+----------+-----------+-------|
+| Originalidad | Relevancia | Claridad | Presencia | Total |
+|--------------+------------+----------+-----------+-------|
+|           10 |        7.5 |        5 |       7.5 |  7.50 |
+|          7.5 |        7.5 |        5 |         5 |  6.25 |
+|           10 |         10 |      7.5 |        10 |  9.38 |
+|           10 |        7.5 |        5 |         5 |  6.88 |
+|           10 |        7.5 |        5 |       7.5 |  7.50 |
+|          7.5 |        7.5 |        5 |         5 |  6.25 |
+|           10 |         10 |      7.5 |        10 |  9.38 |
+|           10 |        7.5 |        5 |         5 |  6.88 |
+|          7.5 |        7.5 |        5 |         5 |  6.25 |
+|            5 |         10 |        5 |       7.5 |  6.88 |
+|          7.5 |         10 |        5 |       7.5 |  7.50 |
+|          7.5 |        7.5 |        5 |         5 |  6.25 |
+|          7.5 |        7.5 |      7.5 |       7.5 |  7.50 |
+|           10 |         10 |      7.5 |       7.5 |  8.75 |
+|          7.5 |        7.5 |        5 |       7.5 |  6.88 |
+|           10 |         10 |      7.5 |       7.5 |  8.75 |
+|           10 |         10 |        5 |       7.5 |  8.13 |
+|--------------+------------+----------+-----------+-------|
+|         8.68 |       8.53 |     5.74 |      6.91 |  7.47 |
+#+TBLFM: @>$1..@>$4=vmean(@II..@III-1); f-2::@2$>..@>$>=vmean($1..$4); f-2
+* Evaluación del docente
+
+- Originalidad del tema :: Excelente (10)
+- Material desarrollado :: Suficiente (5)
+- Contenido :: Bueno (7.5)
+- Fuentes bibliográficas :: Bueno (7.5)
+- Uso del tiempo :: Bueno (7.5)
+- Dominio del tema :: Suficiente (5)
+- Presencia :: Suficiente (5)
+- Global :: 10×0.1 + 5×0.2 + 7.5×0.2 + 10×0.1 + 7.5×0.1 + 5×0.15 +
+            5×0.15 = *6.75*
+
